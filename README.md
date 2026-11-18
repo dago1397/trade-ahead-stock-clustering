@@ -8,7 +8,7 @@ Trade&Ahead es una consultora financiera que ofrece estrategias de inversión pe
 
 ## Datos
 
-Archivo: [`data/stock_data.csv`](data/stock_data.csv). **340 compañías** y **15 columnas**, sin valores nulos.
+Archivo: [`stock_data.csv`](stock_data.csv). **340 compañías** y **15 columnas**, sin valores nulos.
 
 Variables: `Ticker Symbol`, `Security` (nombre de la compañía), `GICS Sector`, `GICS Sub Industry`, `Current Price`, `Price Change` (cambio porcentual en 13 semanas), `Volatility`, `ROE`, `Cash Ratio`, `Net Cash Flow`, `Net Income`, `Earnings Per Share`, `Estimated Shares Outstanding`, `P/E Ratio` y `P/B Ratio`.
 
@@ -55,10 +55,9 @@ Python, pandas, NumPy, scikit-learn (`KMeans`, `AgglomerativeClustering`, `Stand
 .
 ├── README.md
 ├── requirements.txt
-├── data/
-│   └── stock_data.csv
-└── notebooks/
-    └── USL_Project.ipynb
+├── .gitignore
+├── stock_data.csv
+└── USL_Project.ipynb
 ```
 
 ## Cómo ejecutarlo
@@ -69,7 +68,7 @@ source .venv/bin/activate   # en Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Abre `notebooks/USL_Project.ipynb` en Jupyter, VS Code o Google Colab. El notebook ya incluye las salidas ejecutadas (tablas y gráficas), así que se puede revisar el análisis sin volver a correrlo.
+Abre `USL_Project.ipynb` en Jupyter, VS Code o Google Colab. El notebook ya incluye las salidas ejecutadas (tablas y gráficas), así que se puede revisar el análisis sin volver a correrlo.
 
 **Ruta de los datos.** El notebook se escribió en Google Colab y lee el CSV con una ruta fija de Drive; no la modifiqué, para no alterar el código entregado. La línea aparece **dos veces** (el archivo se vuelve a leer antes del preprocesamiento):
 
@@ -80,10 +79,10 @@ df = pd.read_csv('/content/drive/MyDrive/GREAT LEARNING/6. UNSUPERVISED LEARNING
 Para ejecutarlo en local, cambia esas dos llamadas a:
 
 ```python
-df = pd.read_csv('../data/stock_data.csv')
+df = pd.read_csv('./stock_data.csv')
 ```
 
-Si lo corres en Colab, sube `data/stock_data.csv` y actualiza la ruta, o coloca el archivo en la ruta original de Drive después de montar el disco.
+Si lo corres en Colab, sube `stock_data.csv` y actualiza la ruta, o coloca el archivo en la ruta original de Drive después de montar el disco.
 
 ## Crédito
 
@@ -101,7 +100,7 @@ Trade&Ahead is a financial consultancy that offers personalized investment strat
 
 ## Data
 
-File: [`data/stock_data.csv`](data/stock_data.csv). **340 companies** and **15 columns**, with no missing values.
+File: [`stock_data.csv`](stock_data.csv). **340 companies** and **15 columns**, with no missing values.
 
 Columns: `Ticker Symbol`, `Security` (company name), `GICS Sector`, `GICS Sub Industry`, `Current Price`, `Price Change` (13-week percent change), `Volatility`, `ROE`, `Cash Ratio`, `Net Cash Flow`, `Net Income`, `Earnings Per Share`, `Estimated Shares Outstanding`, `P/E Ratio`, and `P/B Ratio`.
 
@@ -148,10 +147,9 @@ Python, pandas, NumPy, scikit-learn (`KMeans`, `AgglomerativeClustering`, `Stand
 .
 ├── README.md
 ├── requirements.txt
-├── data/
-│   └── stock_data.csv
-└── notebooks/
-    └── USL_Project.ipynb
+├── .gitignore
+├── stock_data.csv
+└── USL_Project.ipynb
 ```
 
 ## How to run
@@ -162,7 +160,7 @@ source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Open `notebooks/USL_Project.ipynb` in Jupyter, VS Code, or Google Colab. The notebook already contains executed outputs (tables and plots), so the analysis can be reviewed without re-running it.
+Open `USL_Project.ipynb` in Jupyter, VS Code, or Google Colab. The notebook already contains executed outputs (tables and plots), so the analysis can be reviewed without re-running it.
 
 **Data path.** The notebook was written in Google Colab and reads the CSV from a hardcoded Google Drive path; I left that path unchanged so the delivered code stays intact. The line appears **twice** (the file is re-read before preprocessing):
 
@@ -173,10 +171,10 @@ df = pd.read_csv('/content/drive/MyDrive/GREAT LEARNING/6. UNSUPERVISED LEARNING
 To run it locally, change those two calls to:
 
 ```python
-df = pd.read_csv('../data/stock_data.csv')
+df = pd.read_csv('./stock_data.csv')
 ```
 
-If you run it in Colab, upload `data/stock_data.csv` and update the path, or place the file at the original Drive path after mounting Drive.
+If you run it in Colab, upload `stock_data.csv` and update the path, or place the file at the original Drive path after mounting Drive.
 
 ## Credit
 
